@@ -144,7 +144,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px 40px 40px;
+  padding: 10px 30px 30px;
   gap: 20px;
 }
 
@@ -183,7 +183,7 @@ body {
   color: #000;
   font-weight: bold;
   border: none;
-  padding: 24px 32px; /* Увеличена высота кнопки */
+  padding: 24px 64px; /* Увеличена высота кнопки */
   cursor: pointer;
   font-size: 14px;
   position: relative;
