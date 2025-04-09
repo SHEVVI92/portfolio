@@ -172,7 +172,7 @@ body {
 }
 
 .talk-button-column {
-  flex: 1 1 100%;
+  flex: 0 0 220px; /* фиксированная ширина последней колонки */
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -184,7 +184,7 @@ body {
   color: #000;
   font-weight: bold;
   border: none;
-  padding: 40px 20px 24px;
+  padding: 32px 24px;
   cursor: pointer;
   font-size: 16px;
   width: 100%;
@@ -193,10 +193,11 @@ body {
   flex-direction: column;
   align-items: flex-end;
   text-transform: uppercase;
-  box-shadow: none;
   position: relative;
   height: 100%;
   gap: 12px;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .arrow-icon {
