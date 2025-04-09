@@ -132,3 +132,75 @@ body {
   }
 }
 
+
+/* Все настройки футера */
+.site-footer {
+  background: #d3dad7;
+  color: #111;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 40px 40px;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 160px;
+  font-size: 14px;
+}
+
+.large-text {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #111;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #007bff;
+}
+
+.talk-button-column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.talk-button {
+  background: #f2ff00;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 16px 24px;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.talk-button:hover {
+  background: #e6f200;
+}
+
+/* Логотип во всю ширину */
+.footer-logo {
+  margin-top: 60px;
+}
+
+.footer-logo img {
+  width: 100%;
+  display: block;
+}
+
+
