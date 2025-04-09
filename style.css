@@ -144,7 +144,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10px 30px 30px;
+  padding: 0 40px 40px 40px; /* верхний padding = 0 */
   gap: 20px;
 }
 
@@ -172,11 +172,12 @@ body {
 }
 
 .talk-button-column {
-  flex: 0 60px 220px; /* фиксированная ширина последней колонки */
+  flex: 0 0 240px; /* ширина кнопки */
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   padding: 0;
+  margin: 0;
 }
 
 .talk-button {
@@ -185,24 +186,17 @@ body {
   font-weight: bold;
   border: none;
   padding: 32px 24px;
-  cursor: pointer;
   font-size: 16px;
   width: 100%;
+  height: auto;
   text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-transform: uppercase;
-  position: relative;
-  height: 100%;
   gap: 12px;
-  height: auto;
   box-sizing: border-box;
-}
-
-.arrow-icon {
-  font-size: 75px;
-  line-height: 1;
+  margin: 0;
 }
 
 .talk-button:hover {
