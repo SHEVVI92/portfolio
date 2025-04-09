@@ -172,7 +172,7 @@ body {
 }
 
 .talk-button-column {
-  flex: 0 0 220px; /* фиксированная ширина последней колонки */
+  flex: 0 20px 220px; /* фиксированная ширина последней колонки */
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -201,7 +201,7 @@ body {
 }
 
 .arrow-icon {
-  font-size: 48px;
+  font-size: 75px;
   line-height: 1;
 }
 
