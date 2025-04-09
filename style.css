@@ -144,7 +144,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 60px 40px 40px;
+  padding: 20px 40px 40px;
   gap: 20px;
 }
 
@@ -172,9 +172,10 @@ body {
 }
 
 .talk-button-column {
+  flex: 1 1 160px;
   display: flex;
-  align-items: flex-start;
   justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .talk-button {
@@ -182,7 +183,7 @@ body {
   color: #000;
   font-weight: bold;
   border: none;
-  padding: 16px 24px;
+  padding: 24px 32px; /* Увеличена высота кнопки */
   cursor: pointer;
   font-size: 14px;
   position: relative;
