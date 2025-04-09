@@ -186,13 +186,14 @@ body {
   font-weight: bold;
   border: none;
   padding: 32px 24px;
-  font-size: 16px;
+  font-size: 36px;
   width: 100%;
   height: auto;
-  text-align: right;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center; /* Центрируем текст по вертикали */
   text-transform: uppercase;
   gap: 12px;
   box-sizing: border-box;
@@ -202,6 +203,8 @@ body {
 .talk-button:hover {
   background: #e6f200;
 }
+.talk-button .arrow-icon {
+  font-size: 24px;
 
 /* Логотип во всю ширину */
 .footer-logo {
