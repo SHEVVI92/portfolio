@@ -80,7 +80,7 @@ body {
   border-radius: 2px;
 }
 
-/* Адаптивная версия */
+/* Хэдэр- Адаптивная версия */
 @media (max-width: 768px) {
   .menu-icon {
     display: flex;
@@ -133,18 +133,19 @@ body {
 }
 
 
-/* Все настройки футера */
+/* ВСЕ НАСТРОЙКИ ФУТЕРА */
 .site-footer {
   background: #d3dad7;
   color: #111;
   font-family: 'Arial', sans-serif;
+  padding: 40px 0;
 }
 
 .footer-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 40px 40px 40px; /* верхний padding = 0 */
+  padding: 0 40px 40px; /* верхний padding = 0 */
   gap: 20px;
 }
 
@@ -171,6 +172,11 @@ body {
   color: #007bff;
 }
 
+.footer-column p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
 .talk-button-column {
   flex: 0 0 240px; /* ширина кнопки */
   display: flex;
@@ -197,18 +203,21 @@ body {
   text-transform: uppercase;
   gap: 12px;
   box-sizing: border-box;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
   margin: 0;
 }
 
 .talk-button:hover {
   background: #e6f200;
+  transform: scale(1.05);
 }
 .talk-button .arrow-icon {
   font-size: 24px;
 
 /* Логотип во всю ширину */
 .footer-logo {
-   margin-top: 0;
+   margin-top: 40px;
   width: 100vw;
   overflow: hidden;
 }
@@ -220,4 +229,81 @@ body {
   object-fit: cover;
 }
 
+/* ФУТЕР - АДАПТИВНОСТЬ */
 
+/* Для экранов шириной до 1024px (планшеты) */
+@media (max-width: 1024px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .talk-button-column {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .talk-button {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .footer-logo {
+    margin-top: 20px;
+  }
+}
+
+/* Для экранов шириной до 768px (мобильные устройства) */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .footer-column {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .talk-button-column {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .talk-button {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .footer-logo {
+    margin-top: 20px;
+  }
+}
+
+/* Для экранов шириной до 480px (мобильные устройства с маленькими экранами) */
+@media (max-width: 480px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .talk-button {
+    padding: 16px;
+    font-size: 14px;
+  }
+}
