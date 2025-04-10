@@ -149,26 +149,27 @@ body {
 }
 
 .footer-column {
-  flex: 1 1 160px;
+  flex: 1 1 calc(20% - 24px);
   font-size: 14px;
+  min-width: 160px;
 }
 
 .large-text {
-  font-size: 28px;
+  font-size: 1.25rem;
   font-weight: bold;
   line-height: 1.2;
 }
 
-.footer-column a {
-  text-decoration: none;
-  color: #111;
-  display: block;
-  margin-bottom: 10px;
-  transition: color 0.3s ease;
+/* Иконка письма */
+.footer-mail-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
-.footer-column a:hover {
-  color: #007bff;
+.footer-mail-icon img {
+  width: 48px;
+  height: 48px;
 }
 
 .talk-button-column {
@@ -219,32 +220,23 @@ body {
 }
 
 /*Медиазапросы адаптивности*/
-@media (max-width: 1024px) {
-  .footer-column {
-    flex: 1 1 calc(33.33% - 24px);
-  }
-
-  .talk-button-column {
-    flex: 1 1 100%;
-    justify-content: flex-end;
-  }
-
-  .talk-button {
-    width: auto;
-  }
-}
 @media (max-width: 768px) {
+  .footer-top {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
   .footer-column {
-    flex: 1 1 100%;
-  }
-
-  .talk-button {
-    width: 100%;
+    flex: 1 1 33.33%;
+    min-width: unset;
     text-align: center;
-    align-items: center;
   }
 
-  .arrow-icon {
-    font-size: 36px;
+  .footer-text {
+    text-align: left;
+  }
+
+  .footer-mail-icon {
+    justify-content: flex-end;
   }
 }
