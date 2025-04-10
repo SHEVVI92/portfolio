@@ -138,6 +138,7 @@ body {
   background: #d3dad7;
   color: #111;
   font-family: 'Arial', sans-serif;
+  padding-top: 40px;
 }
 
 .footer-top {
@@ -146,12 +147,14 @@ body {
   justify-content: space-between;
   padding: 0 40px 40px 40px; /* верхний padding = 0 */
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
 .footer-column {
-  flex: 1 1 0;
-  min-width: 180px;
+  flex: 1 0 auto; /* Колонки не сжимаются меньше контента */
+  min-width: 0; /* Разрешаем сжатие контента */
   box-sizing: border-box;
 }
 
@@ -160,14 +163,20 @@ body {
   font-weight: bold;
   text-align: left;
   line-height: 1.2;
+  flex: 1 0 20%; /* Фиксируем ширину первой колонки */
+}
+/* Стили для колонок со ссылками */
+.footer-link-desktop {
+  flex: 1 0 15%; /* Фиксируем ширину ссылочных колонок */
+  text-align: center;
+  display: block;
 }
 
 /* Иконка письма */
 .footer-mail-icon {
+flex: 0 0 80px; /* Фиксированная ширина для иконки */
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
-  overflow: hidden;
 }
 
 .footer-mail-icon img {
@@ -193,34 +202,6 @@ body {
   margin: 4px 0;
 }
 
-.talk-button-column {
-  flex: 0 0 160px; /* ширина кнопки */
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 0;
-  margin-top: 0px;   /* двигает вниз */
-  margin-right: 0px; /* двигает влево */
-}
-
-.talk-button {
- background: #f2ff00;
-  color: #000;
-  font-weight: bold;
-  border: none;
-  padding: 24px 24px;
-  width: 100%;
-  height: auto;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-transform: uppercase;
-  gap: 12px;
-  box-sizing: border-box;
-  margin: 0;
-}
-
 /* Логотип во всю ширину */
 .footer-logo {
    margin-top: 0;
@@ -236,9 +217,26 @@ body {
 }
 
 /*Медиазапросы адаптивности*/
+@media (max-width: 1024px) {
+  .footer-top {
+    padding: 0 30px 30px;
+  }
+   /* Слегка уменьшаем отступы между колонками */
+  .footer-top {
+    gap: 15px;
+    
+  .footer-mail-icon {
+    justify-content: center; /* Центрируем иконку на планшетах */
+  }
+  
+  .mail-icon-wrapper {
+    justify-content: center;
+  }
+}
 @media (max-width: 900px) {
   .footer-top {
     flex-wrap: nowrap;
+    padding: 0 20px 30px;
     justify-content: space-between;
   }
 
@@ -256,13 +254,46 @@ body {
   /* Показываем мобильную колонку со ссылками */
   .footer-links-mobile {
     display: block;
+    flex: 1 0 100%; /* Занимает всю ширину */
+    order: 2; /* Позиционируем после текста и иконки */
+    margin-top: 20px;
   }
 
   .footer-text {
+   flex: 1 0 60%; /* Занимает большую часть первой строки */
     text-align: left;
+    margin-bottom: 0;
   }
 
   .footer-mail-icon {
+     flex: 0 0 80px;
+    order: 1; /* Остается в первой строке */
     justify-content: flex-end;
   }
 }
+@media (max-width: 600px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px 30px;
+  }
+  
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .large-text {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .footer-mail-icon {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .footer-links-mobile {
+    order: 3;
+  }
