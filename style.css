@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  html, body {
+    height: 100%;
+    margin: 0;
+    .main-content {
+    min-height: 100%;
+    padding-bottom: 200px; /* Высота футера */
 }
 
 body {
@@ -135,6 +141,9 @@ body {
 
 /* Все настройки футера */
 .site-footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
   background: #d3dad7;
   color: #111;
   font-family: 'Arial', sans-serif;
