@@ -168,8 +168,8 @@ body {
 }
 
 .footer-mail-icon img {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
 }
 
 .footer-links-mobile {
@@ -232,7 +232,7 @@ body {
 }
 
 /*Медиазапросы адаптивности*/
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .footer-top {
     flex-wrap: nowrap;
     justify-content: space-between;
