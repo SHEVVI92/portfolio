@@ -31,7 +31,32 @@
 
 
 
+  <script>
+  // Настройки скрипта модального окна. Получаем элементы 
+  const mailIcon = document.querySelector('.footer-mail-icon');
+  const modalOverlay = document.getElementById('modal-overlay');
+  const modalClose = document.querySelector('.modal-close');
   
+  // Открытие модального окна
+  mailIcon.addEventListener('click', () => {
+    modalOverlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+  });
+  
+  // Закрытие модального окна
+  modalClose.addEventListener('click', () => {
+    modalOverlay.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Восстанавливаем скролл
+  });
+  
+  // Закрытие при клике вне модального окна
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+      modalOverlay.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+</script>
 </body>
 
 
@@ -67,6 +92,32 @@
 <div class="footer-logo">
     <img src="img/logo.svg" alt="Footer Logo" />
   </div>
+
+    <!-- Модальное окно -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal-close">&times;</button>
+    <h2>Свяжитесь с нами</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Ваш email" required>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="file-upload" class="file-upload-label">
+          <span>Прикрепить файл</span>
+          <input type="file" id="file-upload" name="file-upload">
+        </label>
+      </div>
+      <button type="submit" class="submit-btn">Отправить</button>
+    </form>
+  </div>
+</div>
 </footer>
 
 </html>
