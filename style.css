@@ -182,14 +182,9 @@ flex: 0 0 80px; /* Фиксированная ширина для иконки *
 .footer-mail-icon img {
   width: 64px;
   height: 64px;
+   max-width: 100%;
 }
-/* новая настройка растяжения иконки */
-.mail-icon-wrapper {
-  width: 100%;
-  max-width: 80px;
-  display: flex;
-  justify-content: flex-end;
-}
+
 .footer-links-mobile {
   display: none;
   text-align: center;
@@ -199,7 +194,7 @@ flex: 0 0 80px; /* Фиксированная ширина для иконки *
   display: block;
   text-decoration: none;
   color: inherit;
-  margin: 4px 0;
+  margin: 8px 0;
 }
 
 /* Логотип во всю ширину */
@@ -220,19 +215,15 @@ flex: 0 0 80px; /* Фиксированная ширина для иконки *
 @media (max-width: 1024px) {
   .footer-top {
     padding: 0 30px 30px;
-  }
-   /* Слегка уменьшаем отступы между колонками */
-  .footer-top {
     gap: 15px;
+  }
     
   .footer-mail-icon {
     justify-content: center; /* Центрируем иконку на планшетах */
+     width: 56px;
+    height: 56px;
   }
   
-  .mail-icon-wrapper {
-    justify-content: center;
-  }
-}
 @media (max-width: 900px) {
   .footer-top {
     flex-wrap: nowrap;
@@ -258,7 +249,13 @@ flex: 0 0 80px; /* Фиксированная ширина для иконки *
     order: 2; /* Позиционируем после текста и иконки */
     margin-top: 20px;
   }
-
+ /* Первая строка (текст + иконка) */
+  .footer-top > .footer-text {
+    flex: 1;
+    text-align: left;
+    order: 1;
+    }
+  
   .footer-text {
    flex: 1 0 60%; /* Занимает большую часть первой строки */
     text-align: left;
@@ -266,9 +263,9 @@ flex: 0 0 80px; /* Фиксированная ширина для иконки *
   }
 
   .footer-mail-icon {
-     flex: 0 0 80px;
+     flex: 0 0 auto;
     order: 1; /* Остается в первой строке */
-    justify-content: flex-end;
+   margin-left: auto; /* Прижимаем иконку к правому краю */
   }
 }
 @media (max-width: 600px) {
@@ -284,16 +281,19 @@ flex: 0 0 80px; /* Фиксированная ширина для иконки *
     text-align: center;
   }
   
-  .large-text {
-    text-align: center;
-    margin-bottom: 15px;
+  .footer-text {
+    text-align: left;
+    flex: 1;
+    min-width: 0;
+    padding-right: 15px;
+  }
   }
   
   .footer-mail-icon {
-    justify-content: center;
-    margin-top: 10px;
+   flex: 0 0 auto;
+
   }
   
   .footer-links-mobile {
-    order: 3;
+  margin-top: 15px;
   }
