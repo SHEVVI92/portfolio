@@ -146,7 +146,7 @@ body {
   justify-content: space-between;
   padding: 0 40px 40px 40px; /* верхний padding = 0 */
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .footer-column {
@@ -167,13 +167,20 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .footer-mail-icon img {
   width: 64px;
   height: 64px;
 }
-
+/* новая настройка растяжения иконки */
+.mail-icon-wrapper {
+  width: 100%;
+  max-width: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
 .footer-links-mobile {
   display: none;
   text-align: center;
