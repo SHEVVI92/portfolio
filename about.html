@@ -35,6 +35,25 @@
             <p>Мои увлечения: [ваши увлечения]. Моя цель — [ваша цель].</p>
         </section>
     </div>
+  <!-- Квадратный блок с анимацией -->
+            <div class="animated-box">
+                Наведи на меня
+            </div>
+  <div id="lottie-animation" class="animated-box"></div>
+
+        </section>
+  <script>
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'test.lottie.json'  //путь к файлу анимации
+    });
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
 <body>
 
 </html>
