@@ -150,13 +150,13 @@ body {
 
 .footer-column {
   flex: 1 1 calc(20% - 24px);
-  font-size: 14px;
   min-width: 160px;
 }
 
 .large-text {
   font-size: 1.25rem;
   font-weight: bold;
+  text-align: left;
   line-height: 1.2;
 }
 
@@ -170,6 +170,18 @@ body {
 .footer-mail-icon img {
   width: 48px;
   height: 48px;
+}
+
+.footer-links-mobile {
+  display: none;
+  text-align: center;
+}
+
+.footer-links-mobile a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin: 4px 0;
 }
 
 .talk-button-column {
@@ -226,10 +238,20 @@ body {
     justify-content: space-between;
   }
 
+  /* 3 колонки */
   .footer-column {
     flex: 1 1 33.33%;
     min-width: unset;
-    text-align: center;
+  }
+
+  /* Скрываем десктопные ссылки */
+  .footer-link-desktop {
+    display: none;
+  }
+
+  /* Показываем мобильную колонку со ссылками */
+  .footer-links-mobile {
+    display: block;
   }
 
   .footer-text {
