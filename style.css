@@ -172,12 +172,13 @@ body {
 }
 
 .talk-button-column {
-  flex: 0 0 240px; /* ширина кнопки */
+  flex: 0 0 160px; /* ширина кнопки */
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   padding: 0;
-  margin: 0;
+  margin-top: 0px;   /* двигает вниз */
+  margin-right: 40px; /* двигает влево */
 }
 
 .talk-button {
