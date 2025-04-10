@@ -217,3 +217,34 @@ body {
   height: auto;
   object-fit: cover;
 }
+
+/*Медиазапросы адаптивности*/
+@media (max-width: 1024px) {
+  .footer-column {
+    flex: 1 1 calc(33.33% - 24px);
+  }
+
+  .talk-button-column {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+
+  .talk-button {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .footer-column {
+    flex: 1 1 100%;
+  }
+
+  .talk-button {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .arrow-icon {
+    font-size: 36px;
+  }
+}
